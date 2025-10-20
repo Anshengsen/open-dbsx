@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>待办事项</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>任务清单</h1>
+
+        <div class="input-group">
+            <input type="text" id="new-todo" placeholder="输入新的任务，按 Enter 键添加...">
+            <button id="add-button">添加</button>
+        </div>
+        
+        <div class="controls">
+            <div class="filter-buttons">
+                <button data-filter="all" class="active">所有</button>
+                <button data-filter="active">待办</button>
+                <button data-filter="completed">已完成</button>
+            </div>
+            <button id="clear-completed">清除已完成</button>
+        </div>
+
+        <div class="data-management">
+            <button id="export-data">导出备份 (JSON)</button>
+            <input type="file" id="import-file" accept=".json" style="display: none;">
+            <button id="import-data">导入恢复</button>
+        </div>
+
+        <ul id="todo-list">
+        </ul>
+        
+        <p id="empty-message" style="text-align: center; color: #999; margin-top: 20px; display: none;">太棒了！当前列表为空。</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+    <footer class="license-footer">
+        <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a>
+    </footer>
+</body>
+</html>
